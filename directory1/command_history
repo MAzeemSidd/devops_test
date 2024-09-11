@@ -1,0 +1,371 @@
+    1  do-release-upgrade
+    2  ls -lha
+    3  cd /var/log
+    4  cd ../../
+    5  cd /var/log/
+    6  ls -lha
+    7  less lastlog
+    8  less auth.log
+    9  less syslog
+   10  cd syslog
+   11  cd apt
+   12  ls -lha
+   13  less history.log
+   14  cd ../
+   15  history
+   16  echo history
+   17  less lastlog
+   18  cd ../../
+   19  less lastlog
+   20  cd /var/log/
+   21  history
+   22  vim lastlog
+   23  vim faillog
+   24  sudo vim faillog
+   25  less bootstrap.log
+   26  vim --version
+   27  ls -l
+   28  ls -la
+   29  ls -lah
+   30  cd ../../
+   31  cd -
+   32  cd ~
+   33  cd /var/log/
+   34  cd ~
+   35  history
+   36  ll
+   37  echo history > history.txt
+   38  ll
+   39  cat history.txt
+   40  echo history >> history.txt
+   41  cat history.txt
+   42  history > history.txt
+   43  cat history.txt
+   44  echo history.txt
+   45  sudo apt-get update
+   46  mysql --version
+   47  systemctl status mysql
+   48  service apache status
+   49  curl
+   50  curl --help
+   51  exit
+   52  cat --varsion
+   53  cat --help
+   54  pwd
+   55  ls -l
+   56  ll
+   57  cat history.txt
+   58  cat history.txt | grep "ls"
+   59  wc -l hi
+   60  wc -w history.txt
+   61  wc -l history.txt | grep "ls"
+   62  wc -l "ls"
+   63  wc -l ls
+   64  grep -wc "ls" history.txt
+   65  cat > atextfile.txt
+   66  ll
+   67  cat atextfile.txt
+   68  sc atextfile.txt
+   69  wc atextfile.txt
+   70  grep wc "lorem" atextfile
+   71  grep wc "lorem" atextfile.txt
+   72  ll
+   73  grep -wc "lorem" atextfile.txt
+   74  cat atextfile
+   75  cat atextfile.txt
+   76  cat atextfile.txt | grep "lorem"
+   77  grep -wc "lorem" atextfile.txt
+   78  grep -wc "ipsum" atextfile.txt
+   79  cat atextfile.txt | grep -wc "lorem"
+   80  grep -o "ipsum" atextfile.txt
+   81  grep -oc "ipsum" atextfile.txt
+   82  grep -owc "ipsum" atextfile.txt
+   83  grep -o "ipsum" atextfile.txt | wc -l
+   84  grep -o "ipsum" atextfile.txt | wc -w
+   85  grep -o "ipsum" atextfile.txt | wc -c
+   86  wc -c atextfile.txt
+   87  ll
+   88  mkdir f1
+   89  ll
+   90  cp atextfile.txt f1/
+   91  ll
+   92  cd f1
+   93  ll
+   94  cd ~
+   95  cd -
+   96  cp atextfile.txt ./
+   97  ll
+   98  cp atextfile.txt anewtextfile.txt
+   99  ll
+  100  cat anewtextfile.txt
+  101  cat atextfile.txt
+  102  pwd
+  103  ll
+  104  mv anewtextfile.txt anoldtextfile.txt
+  105  ll
+  106  cd ~
+  107  ll
+  108  history
+  109  echo history > file1
+  110  ll
+  111  cat fileq
+  112  cat file1
+  113  rm file1
+  114  ll
+  115  history > file1.txt
+  116  ll
+  117  cat file1.txt
+  118  more file1.txt
+  119  less file1.txt
+  120  tail file1.txt
+  121  tail -4 file1.txt
+  122  exit
+  123  cat etc/os-release
+  124  cat /etc/os-release
+  125  yum
+  126  sudo apt install yum
+  127  sudo yum update -y
+  128  yum repolist all
+  129  exit
+  130  ll
+  131  ll *.log
+  132  ls -l *.log
+  133  ll .txt
+  134  ll *.txt
+  135  cd f1
+  136  ll
+  137  cd~
+  138  cd ~
+  139  whoami
+  140  pwd
+  141  id
+  142  uname
+  143  uname --help
+  144  uname -s
+  145  uname -a
+  146  su
+  147  uname
+  148  id
+  149  pwd --help
+  150  pwd -L
+  151  pwd -p
+  152  pwd -P
+  153  pwd [-L]
+  154  pwd [-P]
+  155  history
+  156  less history
+  157  grep -o "lorem" atextfile.txt
+  158  grep -o "lorem" atextfile.txt | wc -l
+  159  wc --help
+  160  grep -o "lorem" atextfile.txt | wc -l
+  161  grep -o "lorem" atextfile.txt | wc -w
+  162  grep -o "lorem" atextfile.txt | wc -c
+  163  grep -o "lorem" atextfile.txt | uniq -c
+  164  grep -o "lorem" atextfile.txt | uniq
+  165  grep -o "lorem" atextfile.txt | uniq -l
+  166  uniq --help
+  167  exit
+  168  cd /var/log
+  169  ll
+  170  cat yum.log
+  171  sudo cat yum.log
+  172  ll
+  173  cd yum.log
+  174  cat auth.log
+  175  sudo cat auth.log
+  176  sudo cat auth.log | wc -l
+  177  sudo cat auth.log
+  178  cat yum.log
+  179  sudo cat yum.log
+  180  ll
+  181  cat dpkg.log
+  182  cat dpkg.log | grep status unpacked | wc -l
+  183  sudo cat dpkg.log | grep status unpacked | wc -l
+  184  sudo cat dpkg.log | grep 2.8.3-2ubuntu0.1 | wc -l
+  185  sudo cat dpkg.log | grep 2.8.3-2ubuntu0.1 | uniq | wc -l
+  186  sudo cat dpkg.log | grep "configure" | uniq | wc -l
+  187  sudo cat dpkg.log | grep "configure" | wc -l
+  188  sudo cat dpkg.log | grep configure | wc -l
+  189  sudo cat dpkg.log | grep configure | uniq | wc -l
+  190  sudo cat dpkg.log | grep linux-image-4.15.0-213-generic:amd64 | uniq | wc -l
+  191  sudo cat dpkg.log | grep linux-image-4.15.0-213-generic:amd64 | wc -l
+  192  sudo cat dpkg.log | grep linux-image-4.15.0-213-generic:amd64 | uniq | wc -l
+  193  sudo cat dpkg.log | grep linux-image-4.15.0-213-generic:amd64 | uniq -c | wc -l
+  194  exit
+  195  ll
+  196  ls -la
+  197  cat etc/passwd
+  198  cat /etc/passwd
+  199  useradd ajji
+  200  sudo useradd ajji
+  201  pwd
+  202  su ajji
+  203  qqqqqqqq
+  204  pwd
+  205  passwd ajji
+  206  sudo passwd ajji
+  207  pwd
+  208  ll
+  209  ls /home/
+  210  whoami
+  211  exit
+  212  su -
+  213  sudo -i
+  214  su ajji
+  215  qqq
+  216  su ajji
+  217  cat /etc/passwd
+  218  userdel ajji
+  219  sudo userdel ajji
+  220  cat /etc/passwd
+  221  useradd --help
+  222  useradd --help | grep home
+  223  useradd --help | grep home | uniq
+  224  useradd --help | grep home
+  225  ls -a
+  226  ls -la
+  227  ll
+  228  cd .profile
+  229  cd /profile
+  230  .profile
+  231  cat .profile
+  232  echo $0
+  233  useradd -m ajji
+  234  sudo -i
+  235  history
+  236  ls etc/passwd
+  237  cat etc/passwd
+  238  sudo cat etc/passwd
+  239  cat /etc/passwd
+  240  ls /home
+  241  ls -la /home/ajji
+  242  cat /etc/default/useradd
+  243  vim /etc/default/useradd
+  244  sudo vim /etc/default/useradd
+  245  cat /etc/default/useradd
+  246  echo $0
+  247  su ajji
+  248  passwd ajji
+  249  sudo passwd ajji
+  250  su ajji
+  251  su ajji
+  252  cat /etc/default/useradd
+  253  sudo vim /etc/default/useradd
+  254  useradd -m ajji2
+  255  ls -la
+  256  exit
+  257  history
+  258  useradd --help
+  259  useradd -h
+  260  sudo -i
+  261  hostname
+  262  exit
+  263  ps
+  264  apt-get install apache2
+  265  sudo apt-get install apache2
+  266  service apache2 status
+  267  sudo systemctl status apache2.service
+  268  ps -aux
+  269  ps -aux | grep apache2
+  270  exit
+  271  sudo i
+  272  history
+  273  sudo -i
+  274  service apache2 status
+  275  service apache2 stop
+  276  qqqqq
+  277  sudo service apache2 stop
+  278  sudo -i
+  279  service apache2 status
+  280  service apache2 start
+  281  sudo service apache2 start
+  282  su ubuntu
+  283  sudo service apache2 status
+  284  sudo service apache2 stop
+  285  ps -aux
+  286  sudo service apache2 start
+  287  ps -aux
+  288  sudo service apache2 stop
+  289  ps -aux
+  290  df
+  291  df -h
+  292  df -hT
+  293  exit
+  294  sudo apt-get install net-utils
+  295  sudo apt-get install -y iputils-ping
+  296  ping
+  297  ping --help
+  298  ping google.com
+  299  exit
+  300  sudo apt-get install git
+  301  git
+  302  git --version
+  303  git config --global user.name "MAzeemSidd"
+  304  git config --global user.email "m.azeemsiddiqui94@gmail.com"
+  305  git config --list
+  306  sudo apt-get update
+  307  git config --list
+  308  git --version
+  309  git
+  310  exit
+  311  ll
+  312  cd etc/default
+  313  cd etc/default/useradd
+  314  cat etc/default/useradd
+  315  sudo cat etc/default/useradd
+  316  sudo -i
+  317  cd f1/
+  318  ll
+  319  ls -lah
+  320  ls /home
+  321  su - azeem1
+  322  sudo su - azeem1
+  323  passwd azeem1
+  324  sudo passwd azeem1
+  325  su - azeem1
+  326  ps
+  327  cat etc/os-release
+  328  cat /etc/os-release
+  329  cat /etc/default/useradd
+  330  su - azeem1
+  331  su - ubuntu
+  332  sudo su - ubuntu
+  333  ll
+  334  cd ~
+  335  cat /etc/default/useradd
+  336  cat /etc/os-release
+  337  git --version
+  338  apt-get update
+  339  sudo apt-get update
+  340  git --version
+  341  cat /etc/apt/sources
+  342  sudo cat /etc/apt/sources
+  343  cd /etc/apt/sources
+  344  cd ./etc/apt/sources
+  345  cat ./etc/apt/sources
+  346  cat ./etc/apt/sources.list
+  347  cat ./etc/apt/sources.list.d
+  348  sudo cat ./etc/apt/sources.list.d
+  349  ll
+  350  cd .ssh
+  351  ll
+  352  cd authorized_keys
+  353  cat authorized_keys
+  354  sudo -i
+  355  ll
+  356  ls -lah
+  357  ssh_keygen
+  358  cd ~
+  359  ls -lah
+  360  cd .ssh/
+  361  ls -lah
+  362  cat authorized_keys
+  363  cd ~
+  364  git clone https://github.com/MAzeemSidd/devops_test.git
+  365  ls -lah
+  366  cd devops_test
+  367  ls -lah
+  368  cat .git/config
+  369  git status
+  370  history
+
